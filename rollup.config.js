@@ -7,6 +7,8 @@ import { terser } from 'rollup-plugin-terser'
 import typescript from 'rollup-plugin-typescript2'
 import css from 'rollup-plugin-import-css'
 import path from 'path'
+import serve from 'rollup-plugin-serve'
+import livereload from 'rollup-plugin-livereload'
 
 import {
   preprocess,
@@ -25,7 +27,6 @@ const opts = {
     allowNonTsExtensions: true
   }
 }
-
 export default {
   input: 'src/main.ts',
   output: {
@@ -57,11 +58,19 @@ export default {
     resolve({
       extensions: ['.js', '.ts']
     }),
-    typescript(),
+    typescript({
+      rollupCommonJSResolveHack: true,
+      check: false
+    }),
     commonjs({
       sourceMap: false
     }),
     css(),
+    !production &&
+      serve({
+        contentBase: 'public'
+      }),
+    !production && livereload(),
     // Give stats about the build
     // Size, file etc.
     production && visualizer(),
