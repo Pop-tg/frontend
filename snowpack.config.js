@@ -2,8 +2,6 @@
 // See all supported options: https://www.snowpack.dev/reference/configuration
 
 const autoPreprocess = require('svelte-preprocess')
-const BundleAnalyzerPlugin =
-  require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 /** @type {import("snowpack").SnowpackUserConfig } */
 
