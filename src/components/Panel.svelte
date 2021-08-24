@@ -4,7 +4,7 @@
   import { writable } from 'svelte/store'
   import { fade } from 'svelte/transition'
 
-  import { genToken } from '@back/utils'
+  import { genToken } from '@api/utils'
 
   import type { Callback } from '@/model'
   import { GoButtonStatus } from '@/model'

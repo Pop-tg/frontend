@@ -1,4 +1,4 @@
-import { clean } from '@back/utils'
+import { clean } from '@api/utils'
 import type {
   VerifyResponse,
   DelResponse,
@@ -7,7 +7,7 @@ import type {
   PostResponse,
   PutResponse,
   ResponseObject
-} from '@v2/model'
+} from '@api/model'
 
 const test = false
 export default {

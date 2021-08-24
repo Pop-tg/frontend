@@ -1,4 +1,4 @@
-import type { URLRecord } from '@back/model'
+import type { URLRecord } from '@api/model'
 import * as yup from 'yup'
 
 const historiesSchema = yup.array().of(
