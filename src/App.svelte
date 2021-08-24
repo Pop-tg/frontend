@@ -3,8 +3,6 @@
   import Panel from './components/Panel.svelte'
 
   const svgInit = { size: '2rem', fill: '#4c4c4c' }
-  const title = 'Pop.tg | URL shortener'
-  const description = 'A simple, easy-to-use and free URL shortener'
 </script>
 
 <div class="links">
