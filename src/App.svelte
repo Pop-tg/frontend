@@ -8,7 +8,7 @@
 </script>
 
 <div class="links">
-  <a class="icon" href="https://github.com/George-Miao/pop.tg"
+  <a class="icon" href="https://github.com/Pop-tg/main"
     >{@html GithubOne(svgInit)}</a
   >
   <a class="icon" href="mailto:gm@miao.dev">{@html SendEmail(svgInit)}</a>
