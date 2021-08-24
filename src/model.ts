@@ -1,13 +1,18 @@
 import type { URLRecord } from '@api/model'
-import * as yup from 'yup'
+import {
+  array as yupArray,
+  object as yupObject,
+  string as yupString,
+  number as yupNumber
+} from 'yup'
 
-const historiesSchema = yup.array().of(
-  yup.object({
-    key: yup.string().required(),
-    oldUrl: yup.string().required(),
-    newUrl: yup.string().required(),
-    token: yup.string().required(),
-    ttl: yup.number().min(60).optional()
+const historiesSchema = yupArray().of(
+  yupObject({
+    key: yupString().required(),
+    oldUrl: yupString().required(),
+    newUrl: yupString().required(),
+    token: yupString().required(),
+    ttl: yupNumber().min(60).optional()
   })
 )
 
