@@ -44,7 +44,7 @@
 
   let alerting = false
   let alertMsg = ''
-  let alertTimeout: NodeJS.Timeout | null
+  let alertTimeout: ReturnType<typeof setTimeout> | null
 
   const alert = (message: string) => {
     if (alertTimeout) {

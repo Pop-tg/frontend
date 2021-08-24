@@ -42,8 +42,8 @@ export default {
           replacement: path.resolve(__dirname, './src')
         },
         {
-          find: '@back',
-          replacement: path.resolve(__dirname, '../backend/src')
+          find: '@api',
+          replacement: path.resolve(__dirname, '../api/src')
         }
       ]
     }),
